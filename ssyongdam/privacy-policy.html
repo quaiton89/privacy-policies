@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>쑝담 - 개인정보 처리방침</title>
+	<style>
+		body {
+			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			max-width: 800px;
+			margin: 0 auto;
+			padding: 20px;
+			line-height: 1.6;
+			color: #333;
+			background-color: #f9f9f9;
+		}
+		.container {
+			background: white;
+			padding: 30px;
+			border-radius: 10px;
+			box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+		}
+		h1 {
+			color: #2c3e50;
+			border-bottom: 3px solid #ff5000;
+			padding-bottom: 10px;
+			margin-bottom: 30px;
+		}
+		h2 {
+			color: #34495e;
+			margin-top: 30px;
+			margin-bottom: 15px;
+		}
+		.highlight {
+			background-color: #ecf0f1;
+			padding: 15px;
+			border-left: 4px solid #ff5000;
+			margin: 20px 0;
+		}
+		.contact-info {
+			background-color: #f8f9fa;
+			padding: 20px;
+			border-radius: 5px;
+			margin-top: 30px;
+		}
+		.date {
+			text-align: right;
+			font-style: italic;
+			color: #7f8c8d;
+			margin-bottom: 20px;
+		}
+		table {
+			width: 100%;
+			border-collapse: collapse;
+			margin: 15px 0;
+		}
+		th, td {
+			border: 1px solid #e1e4e8;
+			padding: 10px;
+			text-align: left;
+			vertical-align: top;
+		}
+		th {
+			background-color: #f8f9fa;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>개인정보 처리방침</h1>
+		<div class="date">최종 업데이트: 2026년 9월 14일</div>
+
+		<div class="highlight">
+			<strong>요약:</strong> 쑝담은 타오바오·티몰·1688 상품의 상세이미지를 순서 그대로 수집해 한글화·편집·마켓 규격 변환을 돕는 크롬 확장 프로그램입니다. <strong>개인정보를 수집하거나 외부로 전송하지 않으며</strong>, 이미지 수집·글자 인식·번역·편집·리뷰 수집·마진 계산·원상품 감시까지 모든 처리가 <strong>사용자의 브라우저 안에서</strong> 끝납니다. 개발자 서버가 존재하지 않습니다.
+		</div>
+
+		<h2>1. 개인정보 수집 및 이용</h2>
+		<ul>
+			<li><strong>수집하는 개인정보: 없음</strong></li>
+			<li>회원가입, 로그인, 계정 연결 기능이 없습니다</li>
+			<li>사용자 정보를 개발자 서버나 제3자에게 전송하지 않습니다</li>
+			<li>분석·추적 도구(애널리틱스, 광고 SDK 등)를 사용하지 않습니다</li>
+		</ul>
+
+		<h2>2. 처리되는 데이터와 저장 위치</h2>
+		<p>확장 기능을 위해 다음 데이터가 사용자의 기기 안에서만 처리됩니다.</p>
+		<table>
+			<tr>
+				<th>데이터</th>
+				<th>처리 방식</th>
+				<th>저장 위치</th>
+			</tr>
+			<tr>
+				<td>상품 상세이미지</td>
+				<td>수집·글자 인식(OCR)·번역·편집·규격 변환을 전부 기기 안에서 처리</td>
+				<td>작업 중에는 브라우저 안에만 있으며, 사용자가 저장을 누르면 사용자 PC의 다운로드 폴더</td>
+			</tr>
+			<tr>
+				<td>이미지 속 문구, 상품 리뷰</td>
+				<td>크롬에 내장된 온디바이스 번역기로 번역 — 외부 번역 서버로 보내지 않음</td>
+				<td>브라우저 안 (저장 시 사용자 PC)</td>
+			</tr>
+			<tr>
+				<td>설정 (환율, 수수료율, 마켓 규격 등)</td>
+				<td>사용자가 입력한 값을 보관</td>
+				<td>브라우저 확장 저장소 (chrome.storage)</td>
+			</tr>
+			<tr>
+				<td>감시 목록 (수집한 상품의 URL·제목·가격)</td>
+				<td>품절·가격 변동 확인에 사용</td>
+				<td>브라우저 확장 저장소</td>
+			</tr>
+			<tr>
+				<td>편집 중인 작업</td>
+				<td>창을 닫아도 이어서 작업할 수 있도록 자동 저장</td>
+				<td>브라우저 IndexedDB</td>
+			</tr>
+		</table>
+		<p>위 데이터는 모두 사용자의 기기에만 존재하며, 개발자는 접근할 수 없습니다.</p>
+
+		<h2>3. 인터넷 연결 및 데이터 전송</h2>
+		<p>쑝담이 보내는 네트워크 요청은 다음 두 가지뿐이며, 모두 <strong>사용자의 기기에서 사용자 본인의 세션으로</strong> 해당 쇼핑몰에 직접 요청합니다.</p>
+		<ul>
+			<li><strong>알리바바 이미지 CDN</strong> (*.alicdn.com) — 사용자가 보고 있는 상품의 상세이미지 원본을 받아 기기 안에서 처리하기 위해</li>
+			<li><strong>상품 페이지</strong> (item.taobao.com, detail.tmall.com, detail.1688.com) — 사용자가 수집한 바로 그 상품의 품절·가격 변동을 확인하기 위해 (감시 기능, 6시간 간격)</li>
+		</ul>
+		<p>이 요청은 사용자가 원래 이용하던 쇼핑몰로 가는 것이며, 개발자나 제3자에게 전달되는 정보는 없습니다.</p>
+
+		<h2>4. 제3자 정보 공유</h2>
+		<ul>
+			<li>사용자 데이터를 제3자에게 판매·전송·공유하지 않습니다</li>
+			<li>광고 SDK, 분석 도구, 외부 로그인을 사용하지 않습니다</li>
+			<li>신용도 판단이나 대출 목적으로 데이터를 사용하지 않습니다</li>
+		</ul>
+
+		<h2>5. 확장 프로그램 권한</h2>
+		<table>
+			<tr>
+				<th>권한</th>
+				<th>필요한 이유</th>
+			</tr>
+			<tr>
+				<td>storage</td>
+				<td>설정, 감시 목록, 작업 자동 저장을 브라우저에 보관</td>
+			</tr>
+			<tr>
+				<td>downloads</td>
+				<td>수집·가공한 이미지를 상품명 폴더에 순서 번호를 붙여 저장</td>
+			</tr>
+			<tr>
+				<td>alarms</td>
+				<td>감시 기능의 주기 확인(6시간) 예약</td>
+			</tr>
+			<tr>
+				<td>notifications</td>
+				<td>원상품 품절·가격 변동 알림 표시</td>
+			</tr>
+			<tr>
+				<td>쇼핑몰 도메인 접근</td>
+				<td>상품 페이지에 수집 버튼을 표시하고, 상세 영역 이미지의 주소와 순서를 읽기 위해</td>
+			</tr>
+		</table>
+		<p>기능 제공에 불필요한 권한은 요청하지 않습니다.</p>
+
+		<h2>6. 데이터 보안</h2>
+		<ul>
+			<li>데이터는 기기 안에서만 처리되며 외부 전송이 없습니다</li>
+			<li>번역은 크롬에 내장된 온디바이스 번역기를 사용하므로 문구가 외부 번역 서버로 나가지 않습니다</li>
+			<li>브라우저가 제공하는 확장 저장소의 보안 메커니즘을 따릅니다</li>
+		</ul>
+
+		<h2>7. 사용자 권리 및 데이터 삭제</h2>
+		<ul>
+			<li>감시 목록의 개별 항목은 감시 화면에서 [삭제]로 지울 수 있습니다</li>
+			<li>크롬에서 쑝담을 삭제하면 확장 저장소와 자동 저장 데이터가 함께 제거됩니다</li>
+			<li>다운로드 폴더에 저장된 이미지는 사용자가 직접 관리합니다</li>
+		</ul>
+
+		<h2>8. 아동의 개인정보</h2>
+		<p>쑝담은 판매자용 도구이며 아동을 대상으로 하지 않습니다. 어떤 개인정보도 수집하지 않으므로 아동의 개인정보 또한 수집하지 않습니다.</p>
+
+		<h2>9. 개인정보 처리방침 변경</h2>
+		<ul>
+			<li>기능이 바뀌어 데이터 처리 방식이 달라지면 이 페이지를 먼저 갱신합니다</li>
+			<li>웹스토어 등록 정보의 데이터 사용 공개 내용도 함께 갱신합니다</li>
+			<li>변경된 방침은 게시일로부터 효력이 발생합니다</li>
+		</ul>
+
+		<div class="contact-info">
+			<h2>10. 연락처</h2>
+			<p>개인정보 처리방침에 대한 문의사항이 있으시면 아래로 연락해 주세요:</p>
+			<ul>
+				<li><strong>개발자:</strong> 김명인</li>
+				<li><strong>이메일:</strong> jeomcoder@outlook.com</li>
+				<li><strong>확장 프로그램명:</strong> 쑝담</li>
+			</ul>
+		</div>
+
+		<p style="margin-top: 40px; text-align: center; color: #7f8c8d; font-size: 14px;">
+			본 개인정보 처리방침은 2026년 9월 14일부터 시행됩니다.
+		</p>
+	</div>
+</body>
+</html>
